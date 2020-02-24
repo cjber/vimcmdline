@@ -49,7 +49,7 @@ endfunction
 
 function! PythonSendLine()
     let line = getline(".")
-    if line =~ '^.+\s'
+    if line =~ '^\w+ '
         let lines = []
         let idx = line('.')
         while idx <= line('$')
