@@ -49,7 +49,7 @@ endfunction
 
 function! PythonSendLine()
     let line = getline(".")
-    if line =~ '^class ' || line =~ '^def ' || line =~ '^for ' || line =~ '^\w '
+    if line =~ '^.+ ' || line =~ '^\s*'
         let lines = []
         let idx = line('.')
         while idx <= line('$')
